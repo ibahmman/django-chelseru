@@ -1,0 +1,57 @@
+{% extends 'tw_base_main.html' %}
+{% block header %}{% endblock %}
+{% block footer %}{% endblock %}
+
+{% block body_main %}
+
+<form action="" method="get" class="w-full h-full bg-gray-800 p-4 flex flex-col font-mono text-sm">{% csrf_token %}
+    <div class="grid gap-6 mb-6 md:grid-cols-2">
+        <div id="title_box" class="w-full p-2">    
+            <div class="flex flex-row justify-between w-full">
+                <label for="title" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">project title:</label>
+                <label for="title" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">شرح پروژه</label>
+            </div>
+            <input type="text" name="_title" id="title" class="w-full p-2.5 text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+        </div>
+        
+        <div id="more_box" class="w-full p-2">    
+            <div class="flex flex-row justify-between w-full">
+                <label for="more" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">more:</label>
+                <label for="more" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">شرح بیشتر</label>
+            </div>
+            <textarea rows="6" name="_more" id="more" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"></textarea>
+        </div>
+
+        <div id="categories_box" class="w-full p-2">    
+            <div class="flex flex-row justify-between w-full">
+                <label for="more" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">topics:</label>
+                <label for="more" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">دسته بندی ها</label>
+            </div>
+            <textarea rows="6" name="_more" id="more" list="skills" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"></textarea>
+            <datalist id="skills">
+                <option value="1"></option>
+                <option value="2"></option>
+                <option value="3"></option>
+                <option value="4"></option>
+                {% for cate in categories %}
+                <option value="{{category.title}}">{% if category.parent %}{{category.parent}}{% endif %}</option>
+                {% endfor %}
+            </datalist>
+        </div>
+    </div>
+
+
+
+
+
+
+        
+    <button type="reset">
+        no
+    </button>
+    <button type="submit" name="_send-order" id="send-order">
+        ok
+    </button>
+</form>
+
+{% endblock %}
