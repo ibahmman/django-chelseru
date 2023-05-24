@@ -1,0 +1,25 @@
+{% load static %}
+
+<a href="{% url 'accounts:profile' %}">
+    <img src="{% if request.user.profile.avatar %}/media/{{request.user.profile.avatar}}{% else %}{% static 'imgs/non_avatar.jpeg' %}{% endif %}" width="32" height="32" alt="برنامه نویس" class="w-10 h-10 rounded-full shadow border-solid border-2 border-sky-500">
+</a>
+
+
+<a href="{% url 'accounts:profile' %}" class="">
+    <img src="{% static 'svgs/video-solid.svg' %}" width="32" height="32" alt="آموزش مجازی">
+</a>
+
+
+<a href="">
+    <img src="{% static 'svgs/person-chalkboard-solid.svg' %}" width="32" height="32" alt="گروه های برنامه نویسی">
+</a>
+
+
+<a href="">
+    <img src="{% static 'svgs/microphone-solid.svg' %}" width="24" height="24" alt="پرسش و پاسخ">
+</a>
+
+
+<a href="">
+    <img src="{% static 'svgs/users-rectangle-solid.svg' %}" width="32" height="32" alt="آموزش تصویری">
+</a>

@@ -10,6 +10,7 @@ def index(request):
     response = json.loads(response)
     return render(request, 'artas/index.html', {'serueia': response[0]['39'], 'chelseru': response[1]['40']})
 
+#
 
 def new_order(request):
     return render(request, 'artas/order_new.html', {})

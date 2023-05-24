@@ -1,0 +1,20 @@
+{% load static %}
+
+<div id="header" class="flex flex-row items-center justify-between p-1 bg-blue-300 shadow border-b-0 border-blue-200">
+    <div id="h-left" class="flex flex-row items-center w-1/2 h-full">
+        <a href="" id="b-fav">
+            <img src="{% static 'svgs/star-solid.svg' %}" width="16" height="16" alt="" class="">
+        </a>
+        {% block header_inbox %}
+        <!-- <a href="" id="inbox" class="ml-3 flex flex-row rounded-full shadow pl-1 pr-1">
+            <span class="mr-2">0</span>
+            <img src="{% static 'svgs/inbox-solid.svg' %}" width="16" height="16" alt="" class="">
+        </a> -->
+        {% endblock %}
+    </div>
+    <div id="h-right" class="flex flex-row-reverse items-center w-1/2 h-full">
+        <button id="b-menu">
+            <img src="{% static 'svgs/bars-solid.svg' %}" width="16" height="16" alt="" class="">
+        </button>
+    </div>
+</div>

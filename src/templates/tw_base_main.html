@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>{% block title %}{% endblock %}</title>
+
+        <!-- styles -->
+        {% load static %}
+        <link rel="stylesheet" href="{% static 'css/tailwind.css' %}">
+        <link rel="stylesheet" href="{% static 'css/lur.css' %}">
+
+        {% block head %}{% endblock %}
+    </head>
+
+
+    {% block sidebar %}{% endblock %}
+
+    <!-- body -->
+    {% block body_full %}
+    <body class="w-full h-full pt-10 pb-20 bg-gray-800 flex flex-col justify-center items-center">
+        {% block body_main %}
+        <div class="flex flex-col justify-center items-center w-full h-full" style="overflow-y: scroll;">
+            {% block body %}
+            <h1 class="bg-red-900">Hello Tailwind</h1>
+            {% endblock %}
+
+        </div>
+        {% endblock %}
+
+    </body>
+    {% endblock %}
+
+    <!-- hader -->
+    <header class="fixed top-0 w-full h-10">
+        <div class="flex flex-col w-full h-full">
+            {% block header_main %}
+            <div id="header" class="flex flex-row items-center justify-between p-1 bg-gray-700 shadow border-b-0 border-blue-200">
+                {% block header %}
+                <div id="h-left" class="flex flex-row items-center w-1/2 h-full pl-3">
+                    {% block header_left_buttons %}{% endblock %}
+                </div>
+                <div id="h-right" class="flex flex-row-reverse items-center w-1/2 h-full pr-3">
+                    {% block header_right_buttons %}{% endblock %}
+
+                    {% block header_menu %}
+                    <button id="b-menu">
+                        <img src="{% static 'svgs/bars-solid.svg' %}" width="16" height="16" alt="" class="">
+                    </button>
+                    {% endblock %}
+
+                </div>
+                {% endblock %}
+                
+            </div>
+            {% endblock %}
+        </div>
+    </header>
+
+    <!-- footer -->
+    {% block footer_full %}
+    <footer class="fixed bottom-0 w-full h-12 p-2 pr-4 pl-4 flex flex-row-reverse justify-between items-center align-middle shadow border-t-2 border-t-gray-800 bg-gray-900">
+        {% block footer %}
+            {% include 'tw_footer_main.html' %}
+        {% endblock %}
+        
+    </footer>
+    {% endblock %}
+
+</html>

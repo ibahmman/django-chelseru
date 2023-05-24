@@ -1,0 +1,85 @@
+.lur-header {
+    width: 100%;
+    height: 30px;
+    background-color: lightgoldenrodyellow;
+}
+
+.lur-profile-details {
+    width: 100%;
+    /* height: 30%; */
+    /* background-color: darkturquoise; */
+    /* display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: start; */
+}
+
+.lur-profile-posts {
+    width: 100%;
+    /* height: 70%; */
+    background-color: palegoldenrod;
+}
+
+.lur-avatar {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #EEEEEE;
+}
+
+.lur-profile-counters {
+    width: 100%;
+    /* display: flex;
+    flex-direction: row;
+    justify-content: space-between; */
+}
+
+.lur-bg-1-1 {
+    background-color: #222831;
+}
+
+.lur-bg-1-2 {
+    background-color: #393E46;
+}
+
+.lur-bg-1-3 {
+    background-color: #FFD369;
+}
+
+.lur-bg-1-4 {
+    background-color: #EEEEEE;
+}
+
+.lur-link-1-1 {
+    color: #222831;
+}
+
+.lur-link-1-2 {
+    color: #393E46;
+}
+
+.lur-link-1-3 {
+    color: #FFD369;
+}
+
+.lur-link-1-4 {
+    color: #EEEEEE;
+}
+
+
+.lur-bg-2-1 {
+    background-color: #1D3E53;
+}
+
+.lur-bg-2-2 {
+    background-color: #254B62;
+}
+
+.lur-bg-2-3 {
+    background-color: #476D7C;
+}
+
+.lur-bg-2-4 {
+    background-color: #77ABB7;
+}
+

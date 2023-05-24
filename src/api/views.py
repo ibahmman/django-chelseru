@@ -7,13 +7,13 @@ import random
 
 class SeruViewSet(viewsets.ModelViewSet):
     queryset = models.Seru.objects.all()
-    http_method_names = ['get', 'post', 'put', 'delete']
+    http_method_names = ['get']
     serializer_class = serializers.SeruSerializer
 
 
 @api_view(['GET'])
 def chelseru_beyr(_):
-    chelseru_count = 11
+    chelseru_count = 9
     objs = models.Seru.objects.all()
     chelserus = list()
     while len(chelserus) < chelseru_count:
