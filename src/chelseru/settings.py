@@ -23,9 +23,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-cn6%nc&hd(9=vd))zos*x5(ow*s+j7ex)u1lher!06q-run_49'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = ['localhost', 'vps.chelseru.com']
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost', '45.156.185.168', 'vps.chelseru.com']
 
 
 # Application definition
@@ -123,8 +123,10 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
 STATIC_URL = 'static/'
+STATIC_ROOT = '/var/www/chelseru.com/static/'
 STATICFILES_DIRS = [
     BASE_DIR / 'static',
+    #'/var/www/djangochelseru/static',
 ]
 
 

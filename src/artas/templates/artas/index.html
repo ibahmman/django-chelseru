@@ -1,6 +1,6 @@
 {% extends 'tw_base_main.html' %}
 {% load static %}
-{% block title %}آرمان تفکر آسمان{% endblock %}
+{% block title %}چلسرو{% endblock %}
 
 
 {% block header %}{% endblock %}
@@ -12,8 +12,11 @@
 {% endblock %}
 
 {% block body_main %}
-<div class="flex justify-center w-full h-full text-blue-900">
-    
+<div class="flex flex-col justify-center items-center w-full h-full text-blue-900">
+	<img src="{% static 'imgs/ChelseruBrowser.png' %}" width="250">
+	<div class="bg-white pl-2 pr-2 rounded rounded-xl">
+		<input type='text' class="bg-white" size="30">
+	</div>
 </div>
 
 {% endblock %}
